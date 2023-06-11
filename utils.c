@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 17:37:38 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/05 13:09:29 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:53:30 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,5 @@ void	index3(t_element **stack_a)
 	nums[2] = (*stack_a)->next->next->value;
 	sort_for_index(nums, 3);
 	give_index(stack_a, nums);
+	free(nums);
 }

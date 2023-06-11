@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotation.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:30:16 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/10 15:32:41 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:40:15 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ void	rotate(t_element **stack, char a_or_b)
 	*stack = (*stack)->next;
 	last->next->next = NULL;
 	if (a_or_b == 'a')
-		printf("ra\n");
+		write(1, "ra\n", 3);
 	else if (a_or_b == 'b')
-		printf("rb\n");
+		write(1, "rb\n", 3);
 }
+
 void	rotaterev(t_element **stack, char a_or_b)
 {
 	t_element	*last;
@@ -43,9 +44,9 @@ void	rotaterev(t_element **stack, char a_or_b)
 	last->next = *stack;
 	*stack = last;
 	if (a_or_b == 'a')
-		printf("rra\n");
+		write(1, "rra\n", 3);
 	else if (a_or_b == 'b')
-		printf("rrb\n");
+		write(1, "rrb\n", 3);
 }
 void	r(t_element **stack, int rev, char a_or_b)
 {

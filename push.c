@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:58:37 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/06 15:40:10 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:40:58 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	pa(t_element **stack_a, t_element **stack_b)
 			b_first->next = *stack_a;
 			*stack_a = b_first;
 		}
-		printf("pa\n");
+		write(1, "pa\n", 3);
 	}
 }
 
@@ -52,6 +52,6 @@ void	pb(t_element **stack_a, t_element **stack_b)
 			a_first->next = *stack_b;
 			*stack_b = a_first;
 		}
-		printf("pb\n");
+		write(1, "pb\n", 3);
 	}
 }

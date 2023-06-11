@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   s.c                                                :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 12:20:13 by ekordi            #+#    #+#             */
-/*   Updated: 2023/05/17 13:37:08 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:52:49 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_element **stack_a)
 		first->next = second->next;
 		second->next = first;
 		*stack_a = second;
-		printf("sa\n");
+		write(1, "sa\n", 3);
 	}
 }
 void	sb(t_element **stack_b)
@@ -39,7 +39,7 @@ void	sb(t_element **stack_b)
 		first->next = second->next;
 		second->next = first;
 		*stack_b = second;
-		printf("sb\n");
+		write(1, "sb\n", 3);
 	}
 }
 void	ss(t_element **stack_a, t_element **stack_b)

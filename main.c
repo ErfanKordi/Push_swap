@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 16:33:55 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/11 20:24:33 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:36:29 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int	main(int argc, char **argv)
 	sort(&stack_a, &stack_b);
 	free(nums);
 	terminate(&stack_a, NULL, -1);
+	// terminate(&stack_b, NULL, -1);
 	leak_check();
 	return (0);
 }

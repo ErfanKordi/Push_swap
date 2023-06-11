@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: asioud <asioud@42heilbronn.de>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 10:47:06 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/10 15:33:57 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 20:31:39 by asioud           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void	sort_big(t_element **stack_a, t_element **stack_b)
 		pa(stack_a, stack_b);
 	}
 }
+
 void	sort(t_element **stack_a, t_element **stack_b)
 {
 	if (slstsize(*stack_a) <= 3)
