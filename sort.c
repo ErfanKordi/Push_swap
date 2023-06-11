@@ -6,7 +6,7 @@
 /*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 10:47:06 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/06 15:41:15 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/10 15:33:57 by ekordi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,6 @@ void	sort3(t_element **stack_a)
 		sa(&(*stack_a));
 	}
 }
-// void	sort3(t_element **s)
-// {
-// 	int	a;
-// 	int	b;
-// 	int	c;
-
-// 	a = (*s)->value;
-// 	b = (*s)->next->value;
-// 	c = (*s)->next->next->value;
-// 	if (a > b && b < c && a < c)
-// 		sa(s);
-// 	else if ((a > c && c > b) || (c > a && a > b))
-// 		r(s,0,'a');
-// 	else if (b > a && a > c)
-// 		r(s,1,'a');
-// 	sa(s);
-// 	r(s, (a > b && b > c) || (c > b && b > a), 'a');
-// }
-
 void	sort5(t_element **stack_a, t_element **stack_b)
 {
 	int	id;
@@ -75,7 +56,6 @@ void	sort5(t_element **stack_a, t_element **stack_b)
 }
 void	sort_big(t_element **stack_a, t_element **stack_b)
 {
-
 	int	len;
 	int	i;
 	int	reference;
@@ -94,12 +74,6 @@ void	sort_big(t_element **stack_a, t_element **stack_b)
 		else
 			r(stack_a, 0, 'a');
 	}
-	// while ((*stack_b) != NULL)
-	// {
-	// 	//printf("index: %d\n", (*stack_b)->index);
-	// 	printf("Value: %d\n", (*stack_b)->value);
-	// 	*stack_b = (*stack_b)->next;
-	// }
 	while (len--)
 	{
 		i = find_index(*stack_b, len);

@@ -6,23 +6,11 @@
 /*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 14:58:04 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/05 13:08:22 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/11 19:27:39 by ekordi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	make_new_element(char *a, t_element **stack_a)
-{
-	int			num;
-	t_element	*new;
-
-	num = ft_atoi(a);
-	new = (t_element *)ft_calloc(sizeof(t_element), 1);
-	new->value = num;
-	new->next = *stack_a;
-	*stack_a = new;
-}
 
 void	parse(t_element **a, char **argv, int argc)
 {
@@ -40,11 +28,12 @@ void	parse(t_element **a, char **argv, int argc)
 		while (i >= 0)
 		{
 			if (is_int(strs[i]) && !is_dup(*a, strs[i]))
-				make_new_element(strs[i--], a);
+				ft_lstadd_front(a, ft_lstnew(ft_atoi(strs[i--])));
 			else
-				error(*a, strs, 1); //i have to free strs stack a and b too.
+				terminate(a, strs, 1); //i have to free strs stack a and b too.
 		}
-		free(strs);
 		index--;
 	}
+	i = 0;
+	terminate(NULL, strs, -1);
 }

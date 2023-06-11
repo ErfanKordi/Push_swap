@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   rotation.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:30:16 by ekordi            #+#    #+#             */
-/*   Updated: 2023/06/01 20:31:13 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/10 15:32:41 by ekordi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 
 void	rotate(t_element **stack, char a_or_b)
 {
-	t_element	*first;
 	t_element	*last;
 
 	last = *stack;
-	first = *stack;
 	while (last->next)
 		last = last->next;
+	last->next = *stack;
 	*stack = (*stack)->next;
-	last->next = first;
-	first->next = NULL;
+	last->next->next = NULL;
 	if (a_or_b == 'a')
 		printf("ra\n");
 	else if (a_or_b == 'b')

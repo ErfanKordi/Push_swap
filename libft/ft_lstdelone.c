@@ -6,16 +6,15 @@
 /*   By: ekordi <ekordi@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 12:51:08 by ekordi            #+#    #+#             */
-/*   Updated: 2023/05/17 13:05:05 by ekordi           ###   ########.fr       */
+/*   Updated: 2023/06/10 15:50:44 by ekordi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_element *lst, void (*del)(void *))
+void	ft_lstdelone(t_element *lst)
 {
-	if (!lst || !del)
+	if (!lst)
 		return ;
-	del(lst->content);
 	free(lst);
 }
